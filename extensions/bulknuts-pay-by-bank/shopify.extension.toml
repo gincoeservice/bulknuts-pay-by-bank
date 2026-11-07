@@ -1,0 +1,19 @@
+api_version = "2026-10"
+
+[[extensions]]
+name = "Bulk Nuts Pay by Bank"
+handle = "bulknuts-pay-by-bank"
+uid = "469c0829-c6af-b29d-0782-c5576a44894a1f6842b9"
+type = "ui_extension"
+
+[[extensions.targeting]]
+module = "./src/ThankYou.jsx"
+target = "purchase.thank-you.block.render"
+default_placement = "ORDER_STATUS1"
+
+[[extensions.targeting]]
+module = "./src/OrderStatus.jsx"
+target = "customer-account.order-status.block.render"
+
+[extensions.capabilities]
+api_access = true
